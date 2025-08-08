@@ -25,7 +25,6 @@ class Solution {
         int n = 15;
         List<String> result = sol.fizzBuzz(n);
 
-        // Print the whole list at once
         System.out.println(result);
     }
 }
