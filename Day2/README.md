@@ -13,6 +13,18 @@ Given an integer `n`, return a **string array** `answer` (1-indexed) where:
 
 ---
 
+### Input
+
+- An integer `n` (1 ≤ n ≤ 10⁴) representing the length of the list to generate.
+
+---
+
+### Output
+
+- A list of strings of length `n`, where the `i`-th element corresponds to the rules described above for number `i+1`.
+
+---
+
 ## Approach
 
 To solve this problem, we iterate through the numbers from 1 to `n` (inclusive) and apply the following checks for each number `i`:
