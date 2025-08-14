@@ -16,7 +16,6 @@ public class Solution {
         Scanner sc = new Scanner(System.in);
         int[][] arr = new int[5][5];
 
-        System.out.println("Enter the elements of the matrix (only 0's and one 1):");
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
                 arr[i][j] = sc.nextInt();
@@ -25,6 +24,5 @@ public class Solution {
         sc.close();
 
         System.out.println(position(arr));
-        sc.close();
     }
 }
