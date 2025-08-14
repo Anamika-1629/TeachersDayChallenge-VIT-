@@ -1,7 +1,6 @@
 class Solution:
     def capital(s):
-        s = s.capitalize()
-        return s
+        return s[0].upper() + s[1:]
 
 def main():
     s = input().strip()  
