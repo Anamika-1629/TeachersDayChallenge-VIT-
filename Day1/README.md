@@ -10,18 +10,24 @@ Given an array `nums` of integers, return how many of them contain an **even num
 
 ## Approach
 
-To solve this problem, we iterate through each number in the input array and check whether it has an even number of digits.
+To determine how many numbers have an even number of digits:
 
-1. **Iterate through each number** in the input array `nums`.
+1. **Initialize a counter** to store the count of numbers with an even digit length.
+2. **Loop through each element** in the array `nums`.
+3. For each number:
+   - Convert it to its **absolute value** using `Math.abs()` to avoid counting a minus sign as a digit.
+   - Convert the result to a string using `Integer.toString()`.
+   - Determine its **digit count** by checking the string's `.length()`.
+   - If the digit count is **even** (`length % 2 == 0`), increment the counter.
+4. **After checking all elements**, return the counter as the result.
 
-2. For each number:
-    - Convert the number to a **string** using `Integer.toString()`.
-    - Get the length of the string, which corresponds to the **number of digits** in the number.
-    > **Note:** This method counts all characters including the negative sign if the number is negative. To avoid counting the minus sign, use `Math.abs()` to get the absolute value before conversion.
-    - Check if the digit count is **even** by using the modulo operation `% 2 == 0`.
+This method ensures all elements are processed exactly once and handles negative numbers correctly.
 
-3. Maintain a **counter** to keep track of how many numbers have an even number of digits.
+---
 
-4. After processing all numbers, **return the count**.
+### Complexity Analysis
+
+- **Time Complexity:** `O(n * k)`, where `n` is the number of elements in `nums` and `k` is the average number of digits per number (very small in practical cases).
+- **Space Complexity:** `O(1)` — only a counter variable is used, aside from temporary variables during iteration.
 
 ---
