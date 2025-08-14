@@ -6,9 +6,9 @@ class Solution:
                 temp += s[i]
         
         if len(temp)%2 == 0:
-            return "CHAT WITH HER"
+            return "CHAT WITH HER!"
         else:
-            return "IGNORE HIM"
+            return "IGNORE HIM!"
         
 def main():
     s = input().strip()
