@@ -27,20 +27,28 @@ Given an integer `n`, return a **string array** `answer` (1-indexed) where:
 
 ## Approach
 
-To solve this problem, we iterate through the numbers from 1 to `n` (inclusive) and apply the following checks for each number `i`:
+To solve the problem, follow these steps:
 
-1. **Check if `i` is divisible by both 3 and 5 (i.e., `i % 15 == 0`):**
-   - If yes, append `"FizzBuzz"` to the result list.
+1. **Initialize an empty result list** to store the output strings.
+2. **Iterate** through the integers from `1` to `n` (inclusive).
+3. For each integer `i`:
+   - **Check divisibility by both 3 and 5** (`i % 15 == 0`):  
+     Append `"FizzBuzz"` to the list.
+   - **Else, check divisibility by 3** (`i % 3 == 0`):  
+     Append `"Fizz"` to the list.
+   - **Else, check divisibility by 5** (`i % 5 == 0`):  
+     Append `"Buzz"` to the list.
+   - **Otherwise**:  
+     Append the string form of `i` to the list.
+4. **Return the result list** after the loop completes.
 
-2. **Else, check if `i` is divisible by 3 alone (i.e., `i % 3 == 0`):**
-   - If yes, append `"Fizz"` to the result list.
+This approach ensures each number is checked exactly once, producing the correct sequence in a single pass.
 
-3. **Else, check if `i` is divisible by 5 alone (i.e., `i % 5 == 0`):**
-   - If yes, append `"Buzz"` to the result list.
+---
 
-4. **Otherwise:**
-   - Append the string representation of the number `i` to the result list.
+### Complexity Analysis
 
-After iterating through all numbers, return the result list containing the correct strings for each number according to the Fizz Buzz rules.
+- **Time Complexity:** `O(n)` – each number is evaluated once.
+- **Space Complexity:** `O(n)` – for storing the output list of length `n`.
 
 ---
