@@ -1,22 +1,18 @@
 class Solution:
+    @staticmethod
     def task(word):
-        temp = list(word)
-        new_l = []
-
-        for i in range(len(temp)):
-            if temp[i] not in "aeiou":
-                new_l.append(temp[i])
-
+        vowels = "aoyeui"
         res = []
-        for ch in new_l:
-            res.append('.')
-            res.append(ch.lower())
+        for ch in word:
+            c = ch.lower()
+            if c not in vowels:
+                res.append('.')
+                res.append(c)
+        return ''.join(res)
 
-        word = ''.join(res)
-        return word
 
 def main():
-    word = input().strip()  
+    word = input().strip()
     result = Solution.task(word)
     print(result)
 
