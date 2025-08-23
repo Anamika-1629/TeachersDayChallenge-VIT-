@@ -1,4 +1,4 @@
-public class FindNumbers {
+public class Solution {
         public int findNumbers(int[] nums) {
             int a = 0;
 
@@ -13,7 +13,7 @@ public class FindNumbers {
         }
 
         public static void main(String[] args) {
-            FindNumbers sol = new FindNumbers();
+            Solution sol = new Solution();
 
             System.out.println("Test case 1:");
             int[] test1 = {12, 345, 2, 6, 7896};
