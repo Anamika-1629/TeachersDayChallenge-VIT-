@@ -1,27 +1,20 @@
 import java.util.Scanner;
 
 public class Solution {
-    public static char[] maths(int a, int b){
-        String t1 = Integer.toString(a);
-        String t2 = Integer.toString(b);
-        int n = t1.length();
+    public static char[] maths(String a, String b){
+        int n = a.length(); 
         char[] res = new char[n];
-        for (int i = 0; i<t1.length(); i++){
-            if (((t1.charAt(i) == '0') && (t2.charAt(i) == '1')) || ((t1.charAt(i) == '1') && (t2.charAt(i) == '0'))){
-                res[i] = '1';
-            }
-            else{
-                res[i] = '0';
-            }
+        for (int i = 0; i < n; i++){
+            res[i] = (a.charAt(i) != b.charAt(i)) ? '1' : '0';
         }
         return res;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        String a = sc.next();
+        String b = sc.next();
 
-        System.out.println(maths(a, b));
+        System.out.println(new String(maths(a, b)));
         sc.close();
     }
 }
